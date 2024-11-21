@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2</title>
+    <style>
+        *{
+            margin: 0;           
+        }
+        body{
+            background-image: url(../images/light.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #box{
+            width: 500px; 
+            height: 500px; 
+            background-color: tomato;
+            background-image: url(../images/shop.jpeg);
+            background-repeat: no-repeat;
+            /* background-size: contain; */
+            background-position: top right;
+            margin: 30px;
+            border-right: 8px dashed brown;
+            border-bottom: 8px dotted green;
+            border-left: 18px groove purple;
+        }
+        .link{
+            background-color: aliceblue;
+            padding: 5px;
+            margin: 5px;
+            text-decoration: none;
+            /* border: 2px solid blue; */
+            border-width: 5px;
+            border-style: double;
+            border-color: chocolate;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; padding: 15px; background-color: rgba(0, 0, 255, 0.271);">
+        <h2>Church</h2>
+
+        <nav>
+            <a href="" class="link">Home</a>
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+        </nav>
+    </header>
+    <h2>Using Colors in CSS</h2>
+    <!-- 
+        Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+     -->
+         <p style="background-color: blue;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex assumenda obcaecati, quisquam pariatur quo. Nobis, illum magnam, fugit delectus tempora error quod sapiente cumque expedita ratione dolores alias eveniet!
+     </p>
+     <!-- What are hexadecimals? -->
+     <p style="color: #0000FF;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias hic doloremque, dolores optio animi accusantium deserunt accusamus, mollitia atque inventore possimus iusto ducimus, rem cumque dolorum rerum sunt unde suscipit.
+     </p>
+     <p style="background-color: hsl(240, 100%, 50%);">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores molestiae perferendis commodi odit! Aspernatur, amet minima. Ab quo consectetur eveniet placeat quam mollitia quaerat molestiae accusantium architecto veniam, voluptate vero.
+     </p>
+     <p style="color: rgb(0, 0, 255);">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic quidem cupiditate nisi? Dignissimos blanditiis fuga iure minima ipsam autem odit odio facilis aperiam. Optio temporibus excepturi cupiditate ut quos.
+     </p>
+     <div style="background-color: rgba(0, 0, 255, 0.088);">
+        <h2>I need some Opacity</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque dolore debitis quae iusto optio ad aliquid pariatur necessitatibus, aperiam ipsum fugiat consequuntur, fugit enim qui voluptate reiciendis quidem incidunt.
+        </p>
+     </div>
+     <div style="background-color: hsla(140, 100%, 50%, 0.2)">
+        <h2>I need some Opacity</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque dolore debitis quae iusto optio ad aliquid pariatur necessitatibus, aperiam ipsum fugiat consequuntur, fugit enim qui voluptate reiciendis quidem incidunt.
+        </p>
+     </div>
+
+     <div id="box">
+
+     </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .greet{
+            color: chocolate;
+            font-size: 30px;
+        }
+        /* em -- is Relative to the length i.e font-size of the element. So 2em means 2 * the current size.  */
+        .greet span{
+            font-size: 2em;
+            font-style: italic;
+        }
+        /* rem -- is Relative to the font-size of the root element. For most browsers it is 16px */
+        .call{
+            font-size: 2rem;
+            color: brown;
+        }
+        .hero{
+            background-color: cornsilk;
+            text-transform: uppercase;
+            text-align: center;
+            height: 100vh;
+            width: 50vw;
+            font-size: 60px;
+            font-weight: 800;
+        }
+        .bigBox{
+            height: 500px;
+            width: 500px;
+            background-color: blue;
+        }
+        .smallBox{
+            background-color: aqua;
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS has several units for expressing a length. 
+        Length is a number followed by a unit such as 10px, 2em, 30%, etc
+        For some CSS properties, negative lengths can be used.
+        There are two types of length units: absolute and relative.
+
+        Absolute Length units are fixed and they appear exactly that size.
+        e.g cm, mm, in, px, pt, pc etc.
+
+        Relative Length: these units specify a length relative to another length property. They are more efficient because they scale better between different rendering mediums.
+        e.g em, rem, vh, vw, %, etc.
+
+        other units:
+        deg -- degrees, for angles and rotation i.e 360deg = 1 turn
+        s & ms -- seconds and miliseconds used for transitions and animations
+        turn -- turn for rotations similar to degrees, 1 turn = 360deg
+    -->
+        <div class="hero">
+            WElcome To Class
+        </div>
+
+    <h2 style="font-size: 40px;">CSS UNITS</h2>
+    <div style="height: 50px; background-color: aliceblue;">
+        NEW
+    </div>
+
+    <p class="greet">Hello <span>Mr George</span> , How are you doing today?</p>
+
+    <p class="call">Please come to the gallery ASAP!!!</p>
+    <p style="font-size: 32px; color: brown;">Please come to the gallery ASAP!!!</p>
+
+
+    <div class="bigBox">
+        <div class="smallBox">
+
+        </div>
+    </div>
+</body>
+</html>

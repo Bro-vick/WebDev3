@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 6</title>
+    <style>
+        
+        .start{
+            background-color: darkslategray;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px;
+            text-decoration: none;
+            /* margin-left: 50%; */
+            border-radius: 20px;
+        }
+        .leave{
+            background-color: red;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px;
+            text-decoration: none;
+            /* margin-left: 50%; */
+            border-radius: 20px;
+            display: block;
+        }
+        .reset{
+            background-color: orangered;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            width: 500px;
+        }
+        h3{
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 700;
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Display Property</h1>
+    <!-- 
+        In CSS we have block and inline elements, block elements take up the full width of the page.
+        While inline elements take up the exact width of its content. 
+        
+        Examples of block elements: heading tags, divs, li, p, semantic tags, header, footer, nav, main, etc.
+
+        Examples of inline elements: <a>, <img>, span.
+            Note: Inline elements cannot have a defined width or height, they take the width and height of the content. 
+
+        Inline-block elements: This combines both characteristics of inline and block.
+    -->
+        <h1 style="padding: 10px; background-color: cadetblue;">This is a block element!!!</h1>
+        <h3>We can convert a block element to an inline element by changing the display property.</h3>
+        <h1 style="padding: 10px; background-color: cadetblue; display: inline;">This is a block element!!!</h1>
+        
+        <h3>Examples of inline elements</h3>
+        <a href="./class4.html" class="start">Get started</a>
+        <a href="./class4.html" class="start">Get started</a>
+        
+        <h3>We can convert an inline element to a block element by changing the display property.</h3>
+        <a href="./class4.html" class="leave">Leave Group</a>
+
+        <h3>Examples of inline-block elements</h3>
+        <a href="./class4.html" class="reset">Get started</a>
+        <a href="./class4.html" class="reset">Get started</a>
+
+</body>
+</html>

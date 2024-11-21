@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 12</title>
+    <style>
+        *{
+            margin: 0;
+            /* This has the least  */
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+        }
+        .green{
+            background-color: green;
+            position: relative;
+            z-index: 3;
+        }
+        .red{
+            background-color: red;
+            position: relative;
+            bottom: 100px;
+            left: 30px;
+            z-index: 4;
+        }
+        .blue{
+            background-color: rgba(0, 255, 26, 0.132);
+            position: absolute;
+            top: 60px;
+            left: 50px;
+        }
+        .para::first-letter{
+            font-size: 70px;
+            font-weight: 800;
+        }
+        .para::first-line{
+            font-size: 45px;
+            color: green;
+            font-style: italic;
+            font-weight: 700;
+        }
+        #ex2{
+            background-color: lavender;
+            padding-left: 40%;
+            position: relative;
+            z-index: -3;
+            font-size: 18px;
+            color: yellow;
+            font-weight: 700;
+        }
+        #ex2 img{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .orange{
+            background-color: orange;
+            float: right;
+        }
+        .purple{
+            background-color: purple;
+            float: left;
+        }
+        .para{
+            background-color: bisque;
+        }
+        .para img{
+            float: right;
+        }
+        h3{
+            color: blue;
+        }
+        /*
+             CSS Specificity - If two css selectors point to the same element, the selector with the higher specificity value would be applied.
+            Every CSS selector has its place in it's specificity hierarchy. There are four categories which define the level or precedence.
+            1) Inline styles - Example: <h1 style="color: pink;"> specificity value(+1000)
+            2) ID's - Example: #navbar specificity value(+100) 
+            3) Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href] specificity value(+10)
+            4) Elements and pseudo-elements - Example: h1, ::before specificity value(+1)
+            
+            How to calculate specificity: Examples:
+            .para{} - sv = 10
+            .para img{} - sv = 11
+            #ex2{} - sv = 100
+            h3{} - sv = 1
+        */
+    </style>
+</head>
+<body>
+    <h2 style="font-size: 50px; color: darkcyan;">CSS Z-index, float, Specificity & Dropdown</h2> <!--(Sv = 10000)-->
+    <!-- The z-index property specifies the layer order of elements, making them able to overlap or underlap other elements -->
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+
+    <div id="ex2">
+        <p class="para">
+            I Love Jesus <br>
+            How are you today? <br>
+            See you tommorrow! <br>
+        </p>
+        <img src="../images/light.png" alt="" width="240px" height="120px">
+    </div>
+
+    <h3>CSS Float Property</h3>
+    <!-- The css float property is used for positioning and formatting content, to the left or right majorly. -->
+     <div class="box orange">
+        <h2>Float Right</h2>
+    </div>
+     <div class="box purple">
+        <h2>Float Left</h2>
+     </div>
+     <p class="para" style="background-color: grey;">
+        I Love Jesus <br>
+        How are you today? <br>
+        <img src="../images/light.png" alt="" width="240px" height="120px">
+        See you tommorrow! <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque suscipit distinctio nemo, reiciendis nobis totam sint? Omnis sunt laudantium repellendus at quaerat officia culpa maiores dolore, nihil ab eligendi doloremque.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos soluta ab quas ullam consequuntur. Consequuntur a, voluptas cum explicabo nihil minima cumque, sed tenetur debitis reiciendis nam? Consequatur, nam corporis?
+    </p>
+</body>
+</html>

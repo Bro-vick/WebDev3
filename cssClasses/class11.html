@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 24px;
+        }
+         #class2Btn:active{
+            font-size: 20px;
+            font-weight: 800;
+            color: yellow;
+        }
+        #class2Btn:link{
+            color:  grey;
+        }
+        #class4Btn:visited{
+            font-size: 20px;
+            font-weight: 800;
+            color: green;
+        }
+        /* Pseudo Classes: A pseudo class is used to define a specified state of an element, e.g to style an element when a user mouses over it(:hover), or visits a link(:visited) or is currently on a link(:active), or is currently entering an input(:focus) etc*/
+
+        input:focus{
+            background-color: aliceblue;
+            padding: 10px;
+            outline: none;
+            border: none;
+        }
+
+        /* Pseudo Element: A CSS Pseudo element is used to style specified parts of an element. e.g a placeholder, the first line or letter, a selected part, etc */
+        input::placeholder{
+            color: grey;
+            font-size: 18px;
+        }
+        
+        input{
+            margin: 15px;
+            padding: 15px;
+            color: chocolate;
+            font-style: italic;
+            font-size: 20px;
+        }
+        #para::first-letter{
+            font-size: 70px;
+            font-weight: 800;
+        }
+        #para::first-line{
+            font-size: 45px;
+            color: green;
+            font-style: italic;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#" id="class2Btn">Go to class 2</a>
+    <a href="#3" id="class3Btn">Go to class 2</a>
+    <a href="#23" id="class4Btn">Go to class 2</a>
+
+    <input type="text" placeholder="Search">
+    <p id="para">
+        I Love Jesus <br>
+        How are you today? <br>
+        See you tommorrow! <br>
+    </p>
+</body>
+</html>

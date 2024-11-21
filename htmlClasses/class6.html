@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        form{
+            background-color: darkgray;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Using Forms in HTML   -->
+     <h2>Using Forms in html</h2>
+     <!-- 
+        HTML forms are used to collect user input, this input can be sent to a server or backend for processing.
+        The <form></form> tag is used for html forms.
+     -->
+     <form>
+        <label for="First">First Name:</label>
+        <input id="First" type="text" placeholder="Enter First your name"> <br>
+        <label for="Second">Last Name:</label>
+        <input id="Second" type="text" placeholder="Enter Last your name"> <br>
+        <label for="">Password:</label> <br>
+        <input type="password" placeholder="Password" required> <br>
+        <label for="">Phone Number:</label>
+        <input type="tel" value="+234"> <br>
+        <label for="">Email:</label> <br>
+        <input type="email" required> <br>
+        <input type="submit" value="Register Now">
+     </form>
+     <!-- The for attribute of <label> must be equal to the id attribute of the related element in order to bind them together. -->
+
+     <h2>Forms with Radio Buttons</h2>
+     <!-- 
+        The input type "radio" defines a radio button. Radio buttons allow users to select from a number of choices
+     -->
+        <p>Choose Your programming language</p>
+        <form >
+            <input type="radio" value="Javascript" name="language" id="javascript">
+            <label for="javascript">Javascript</label><br>
+            <input type="radio" value="Python" name="language" id="python">
+            <label for="python">Python</label><br>
+            <input type="radio" value="PHP" name="language" id="PHP">
+            <label for="PHP">PHP</label><br>
+            <input type="radio" value="RUBY" name="language" id="Ruby">
+            <label for="Ruby">RUBY</label><br>
+        </form>
+
+        <h2>Forms with checkboxes</h2>
+         <!-- 
+        The input type "checkbox" defines a checkbox. Checkboxes allow users to select Zero or more options from a number of choices.
+        -->
+        <form action="">
+            <input type="checkbox" name="vehicle" id="veh1" value="Bike">
+            <label for="veh1">I have a bike</label> <br>
+            <input type="checkbox" name="vehicle" id="veh2" value="Car">
+            <label for="veh2">I have a Car.</label> <br>
+            <input type="checkbox" name="vehicle" id="veh3" value="Jet">
+            <label for="veh3">I have a Jet.</label> <br>
+            <input type="checkbox" name="vehicle" id="veh4" value="Boat">
+            <label for="veh4">I have a Speed Boat.</label> <br>
+        </form>
+
+        <!-- Dropdown input using the <select> tag -->
+            <label for="Country">Choose a country</label>
+            <select id="country">
+                <option value=""></option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="Italy">Italy</option>
+            </select> <br>
+
+        <!-- 
+            The <textarea> tag is used to create a message box. Where the "cols" and "rows" attribute define the number of columns in the box(It's width) and the rows define the number of rows(It's height).
+         -->
+        <label for="message">Enter Your Comment:</label> <br>
+        <textarea id="message" cols="100" rows="10" placeholder="Enter Your Comment" ></textarea><br>
+
+        <!-- 
+            The input type "file" is used to recieve an input from the users computer, The accept attribute is used to specify, the type of file to be inputed.
+        -->
+        <label for="img">Please Select an image file:</label>
+        <input type="file" id="img" accept="image/png, image/jpg">
+        <input type="file" id="img" accept=".png, .jpg"><br><br>
+
+
+        <!-- Assignment create an input element that takes only pdf -->
+         <label for="pdf">Select a PDF File:</label>
+         <input type="file" id="pdf" accept="application/pdf">
+         <input type="file" id="pdf" accept=".pdf"><br><br>
+         
+        <!-- Assignment create an input element that takes only excel files. -->
+         <label for="">Select an excel file only:</label>
+         <input type="file" accept=".xlsx, .xls, .csv"> <br>
+
+         <label for="">Select a javascript or html file</label>
+         <input type="file" accept=".html, .js"> <br><br>
+
+         <label for="">Make a reservation</label>
+         <input type="date"><br><br>
+
+         <label for="">Pick a suitable time:</label>
+         <input type="time">  <br><br>
+
+         <label for="">Pick a Color</label>
+         <input type="color"><br><br>
+        
+         <label for="range">How proficient are you in HTML?</label>
+         <span>Rate from level (0-100)</span><br>
+         <input type="range" id="range" min="0" max="100" value="50" step="5" oninput="this.nextElementSibling.value = this.value">
+         <output style="font-size: 20px; color: green; font-weight: 800;">0</output>
+</body>
+</html>

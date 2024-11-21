@@ -1,0 +1,22 @@
+What is Github?
+Github is an online platform that helps developers store, manage and collaborate on coding projects. It is built around Git, which is a version control system, that tracks changes made to files in a project.
+
+
+What is a Version Control System?
+A version control system allows users to keep track of the changes in software development projects, and enable them to collaborate on those projects. Using it, the developers can work together on code and separate their tasks through branches.
+
+go to: github.com -- To create an account and get started with github
+
+
+About READMEs
+You can add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it.
+
+A README is often the first item a visitor will see when visiting your repository. README files typically include information on:
+* What the project does 
+* Why the project is useful
+* How users can get started with the project
+* Where users can get help with your project
+* Who maintains and contributes to the project
+
+Ignoring files
+You can configure Git to ignore files you don't want to check in to GitHub.

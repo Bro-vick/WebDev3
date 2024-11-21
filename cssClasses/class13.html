@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 13</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        :root{
+            --mainBlue: rgb(35, 55, 152, 0.6);
+            --primaryTextColor: rgba(38, 38, 38, 0.886);
+            --secondaryTextColor: rgba(114, 105, 105, 0.886);
+            --mainFont: "Epilogue", serif;
+            --brandYellow: rgb(191, 179, 5);
+            --brandGreen: rgb(36, 103, 0);
+            --brandRed: rgb(159, 29, 0);
+
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            background-color: var(--mainBlue);
+        }
+        nav a{
+            text-decoration: none;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 800;
+            color: var(--primaryTextColor);
+            margin: 5px;
+        }
+       
+        nav a:nth-child(3){
+            background-color: brown;
+        }
+        nav a:hover{
+            border-bottom: 2px solid var(--brandYellow);
+        }
+        .auth button{
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            background-color: var(--mainBlue);
+            color: var(--brandRed);
+            font-weight: 700;
+        }
+        header h1{
+            color: var(--brandGreen);
+            font-size: 40px;
+        }
+        header h1 span{
+            color: var(--brandRed);
+        }
+        main h1{
+            color: var(--primaryTextColor);
+            font-size: 30px;
+        }
+        main p{
+            color: var(--secondaryTextColor);
+        }
+        main a{
+            text-decoration: none;
+            background-color: var(--brandGreen);
+            padding: 8px;
+            /* margin-top: 5px; */
+        }
+        main{
+            font-family: var(--mainFont);
+            background-color: lavender;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS Variables:
+        The var() function is used to insert the value of a CSS variable. A css variable can be of local or global scope.
+        The variable name must begin with two dashes (--) and it is case sensitive.
+        Global scope variables can be accessed throughout the entire document. To create a variable with a global scope, we declare it inside the :root selector.
+    -->
+        <header>
+            <h1>Mr <span>Soft</span></h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Blog</a>
+            </nav>
+            <div class="auth">
+                <button>Login</button>
+                <button>Sign In</button>
+            </div>
+        </header>
+        <main>
+            <h1>Welcome To MRSoft</h1>
+            <p class="para">
+                We are glad to have you!!! <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nisi nam aut, fuga incidunt veritatis asperiores vero facere. Cupiditate, placeat inventore quibusdam obcaecati ea ab! Nulla aut recusandae repudiandae ipsam.
+            </p>
+            <br>
+            <a href="">Get Started Now</a>
+        </main>
+
+        <!-- BOX-SIZING
+             In Css the box-sizing property is used to define how the width and height of an element are calculated. It determines whether padding and borders are included in the element's total width and height.
+        
+        content-box: is the default value. Here only the content's width and height are considered. 
+
+        border-box: The padding and border are included inside the width and height. This means that the content size is reduced to make space for the padding and borders 
+        -->
+        <div style="box-sizing: content-box; width: 200px; height: 200px; padding: 20px; background-color: bisque; border: 10px solid brown;">
+            <p>
+                This Shows Content box
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nesciunt porro illo ut reiciendis debitis et nisi voluptate, id nemo cum officia autem voluptatum accusantium facilis eius explicabo expedita veniam.
+            </p>
+        </div>
+        <br>
+        <div style="box-sizing: border-box; width: 200px; height: 200px; padding: 20px; background-color: bisque; border: 10px solid brown;">
+            <p>
+                This Shows Border box
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nesciunt porro illo ut reiciendis debitis et nisi voluptate, id nemo cum officia autem voluptatum accusantium facilis eius explicabo expedita veniam.
+            </p>
+        </div>
+</body>
+</html>

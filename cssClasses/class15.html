@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 15</title>
+    <style>
+        /*
+            Syntax: 
+            @media media-type and (condition: breakpoint){
+                // CSS Rules to be applied
+            } 
+
+            Media Types:
+            screen - For computer screens, tablets, and mobile phones. 
+            print - For printers, and paper output, 
+            speech - For screen readers that "read" the page out loud.
+            all - For all media types || This  is the default, if we dont specify a media type, the @ media rule selects all types of media by default.
+        */
+        .box{
+            background-color: burlywood;
+            color: brown;
+            font-weight: 800;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+        }
+        @media (max-width: 500px){
+            .box{
+                background-color: orangered;
+                color: bisque;
+                transition: 2s;
+                max-width: 300px;
+            }
+        }
+        @media print{
+            h2{
+                color: red;
+                font-size: 50px;
+            }
+        }
+        @media screen and (landscape){
+
+        }
+       .gallery{
+            margin: auto;
+            display: flex;
+            height: 500px;
+            gap: 10px;
+       }
+       .left{
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            gap: 10px;
+       }
+       .purple{
+            width: 100%;
+            background-color: purple;
+            grid-column: span 2;
+       }
+       .blue{
+            width: 100%;
+            background-color: blue;
+       }
+       .green{
+            width: 100%;
+            background-color: green;
+       }
+       .grey{
+            width: 100%;
+            background-color: grey;
+            grid-column: 2 / 4;
+       }
+       .right{
+            background-color: rgb(32, 67, 98);
+            width: 300px;
+            /* height: 500px; */
+            height: 100%;
+       }
+       .card{
+            height: 250px;
+       }
+       @media(max-width: 680px){
+        .gallery{
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+        }
+       }
+    </style>
+</head>
+<body>
+    <h2>CSS Media Queries</h2>
+      <!-- 
+        The @media rule makes it possible to define different styles for different media types.
+      -->
+        <div class="box">
+
+        </div>
+
+        <div class="gallery">
+            <div class="left">
+                <div class="purple card"></div>
+                <div class="green card"></div>
+                <div class="blue card"></div>
+                <div class="grey card"></div>
+            </div>
+            <div class="right">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quod modi, perspiciatis sunt, maiores, sint dolorum dicta quos maxime quaerat nam. Quos enim assumenda mollitia totam voluptatem. Ducimus, quidem numquam?</p>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* External Styling */
+h2{
+    color: green;
+    text-align: right;
+    font-style: italic;
+}
+p{
+    background-color: aliceblue;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/*
+    CSS comments: They help us explain our code, they do not affect te code and are not displayed on the browser.
+*/
+/* Header */
+header{
+    color: white;
+}
+/* Footer */
+footer{
+    color: white;
+}
+/* Media Queries */
+
+/* CSS Selectors */
+
+/* 
+    Universal Selector: This is denoted by the wildcard character (*), it selects every element in the document. 
+    See Class2 for example.
+*/
+/* 
+    Element Selectors: Where we select the elements by their tag  e.g: p, h1, h2, button,etc.
+*/
+/* 
+    ID Selectors: We can use the id attribute of an HTML element to select a specific element.
+    We use the (#) character tofether with the id-name.
+    Note: ID's Must be unique. i.e No two elements should have the same id-name.
+*/
+/* 
+    Class Selectors: This selects all HTML elements with a specific class attribute. 
+    ClassNames must not be unique. i.e Multiple elements can have the same class-name.
+*/

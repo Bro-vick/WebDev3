@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 16</title>
+    <style>
+        #grad1{
+            width: 400px;
+            height: 400px;
+            background-image: linear-gradient(to top, rgb(196, 102, 102), rgb(123, 123, 255));
+            transition: all 1.5s ease;
+        }
+        #grad2{
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            height: 800px;
+            background-image: linear-gradient(to right, rgb(102, 196, 174), rgb(224, 255, 123));
+        }
+        #grad1:hover{
+            background-image: linear-gradient(to bottom right, rgb(196, 102, 102), rgb(123, 123, 255)); 
+            cursor: pointer;
+            transform: translate(300px, 200px) skew(60deg);
+        }
+        #grad3{
+            width: 400px;
+            height: 400px;
+            background-image: radial-gradient(closest-side at 60% 55%, rgb(196, 102, 102), rgb(123, 123, 255));
+            transition: all 1s ease-in-out;
+        }
+        #grad3:hover{
+            cursor: pointer;
+            transform: scale(4, 2);
+        }
+        #grad4{
+            width: 400px;
+            height: 400px;
+            background-image: conic-gradient(rgb(102, 255, 0) 180deg, blue, orangered);
+            border-radius: 50%;
+            transition: all 1.5s ease;
+        }
+        #grad4:hover{
+            transform: rotate(200deg) scale(2, 2);
+            /* transition: all 1.5s ease; */
+            cursor: pointer;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* gap: 5px; */
+            row-gap: 10px;
+            column-gap: 5px;
+            width: 70vw;
+            margin: auto;
+        }
+        .card{
+            width: 250px;
+            height: 250px;
+            background-color: cadetblue;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+        .card:hover{
+            background-image: linear-gradient(to top right, lavender, lightblue);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h2>Using Gradients in CSS</h2>
+    <div class="gallery">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+     <!-- 
+        Gradients helps us to display a smooth transition between two or more specified colors.
+        There are three types of gradients
+        -- Linear(goes down/up/left/right/diagonally)
+        -- Radial(this is defined by their center)
+        -- Conic (this is rotated around a center point)
+
+        Syntax
+        background-image: linear-gradient(direction, color-stop1, color-stop2, ...) 
+    -->
+        <h2>Linear Graadients</h2>
+        <div id="grad1">
+
+        </div>
+        <div id="grad2">
+            <img src="../images/couple arguing.png" alt="">
+            <h3 style="font-size: 60px; font-weight: 800; color: red;">
+                Too much quarelling!!!
+            </h3>
+        </div>
+
+        <h2>Radial Gradients</h2>
+         <!-- 
+        Syntax:
+            background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+        -->
+            <div id="grad3">
+
+            </div>
+        
+            <h2>Conic Gradients</h2>
+        <!-- 
+            Syntax:
+            background-image: conic-gradient([from angle] [at position,] color [degree], color[degree], ...)
+        -->
+    <div id="grad4"></div>
+
+    <h2>CSS Transforms </h2>
+     <!-- CSS transforms allows us to move, rotate, scale, skew elements. -->
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+    <!-- Internal Styling -->
+    <style>
+        h1{
+            color: brown;
+        }
+        button{
+            background-color: lightblue;
+            color: blue;
+            height: 30px;
+            width: 150px;
+            display: block;
+        }
+        #stop{
+            color: red;
+            background-color: lightcoral;
+            font-weight: 700;
+        }
+        #start{
+            color: lightgreen;
+            background-color: green;
+            font-weight: 700;
+        }
+        #reset{
+            color: yellow;
+            background-color: orange;
+            font-weight: 700;
+        }
+        .btn{
+            display: inline;
+        }
+    </style>
+    <!-- External Styling -->
+    <link rel="stylesheet" href="class1.css">
+</head>
+<body>
+    <h2>Introduction To CSS</h2>
+    <!-- 
+        CSS Stands for Cascading Style Sheets - It defines how html elements are to be displayed on screen.
+        Syntax: selector {property: value;}
+        e.g h1 {color: red;}
+        There are three ways to use CSS on HTML elements. 
+        1) Inline Styling: The CSS rule is added in the style attribute inside the opening tag.
+        2) Internal Styling: The style tag is used inside the head tag to add the CSS rules.
+        3) External Styling: The CSS rules are added in a CSS file(i.e "a file with .css extension"). This is ideal especially if we want reuse the CSS rules on different HTML documents.
+    -->
+    <h1 style="font-size: 60px; text-align: center; background-color: bisque;">Welcome</h1>
+    <p style="color: blue; font-style: italic; font-size: 20px;">
+        Welcome to this Edition of!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus reiciendis iste corporis id vel rem vero accusantium temporibus necessitatibus?
+    </p>
+    <button>Click here to Register</button>
+    <button id="start" class="btn">Click here to Start</button>
+    <button id="stop" class="btn">Click here to Stop</button>
+    <button id="reset" class="btn">Click here to Reset</button>
+    <h1>Hello</h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, explicabo inventore temporibus nihil a tenetur, odit voluptatum sunt sed, esse ex atque perspiciatis modi cupiditate quisquam dignissimos. Suscipit, quia quos!
+    </p>
+    <h1>Thank You!!!</h1>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+        table{
+            width: 50%;
+        }
+        
+    </style>
+  
+</head>
+<body>
+    <!-- Using Tables in HTML -->
+    <h2>A simple HTML Table</h2>
+    <table>
+        <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>George</td>
+            <td>30</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Samuel</td>
+            <td>25</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Esther</td>
+            <td>18</td>
+            <td>Female</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Access bank</td>
+            <td>+1234</td>
+            <td>Nigeria</td>
+        </tr>
+        <tr>
+            <td>SPDC</td>
+            <td>+3445</td>
+            <td>Netherlands</td>
+        </tr>
+        <tr>
+            <td>Agip</td>
+            <td>+3445</td>
+            <td>France</td>
+        </tr>
+        <tr>
+            <td>MTN</td>
+            <td>+3445</td>
+            <td>South Africa</td>
+        </tr>
+     </table>
+
+     <h2>Using Row Span</h2>
+     <table>
+        <tr>
+            <th>Name</th>
+            <td>Prince</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>+1234</td>
+        </tr>
+        <tr>
+           <td>+234123</td> 
+        </tr>
+     </table>
+     <h2>Using Column Span</h2>
+     <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Favour</td>
+            <td>Jesse</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Kelvin</td>
+            <td>25</td>
+        </tr>
+     </table>
+
+     <!-- 
+     Semantic tags in HTML: A semantic tag clearly defines/describes it's meaning to both the browser and the developer.
+     Example of Semantic tags: <table>, <header>, <form>, <nav>, <section>, <main>, <footer> etc.
+     Non semantic tags: <div>, <span>.
+     -->
+
+    <header>
+        <h1>LOGO</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a> <br>
+            <a href="./class4.html#youtube">Class 4 YouTube Section</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <ul>
+                <li>We are unique</li>
+                <li>We are Inovative</li>
+                <li>We are Reliable</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Get in Touch!</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Prince</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Phone</th>
+                    <td>+1234</td>
+                </tr>
+                <tr>
+                   <td>+234123</td> 
+                </tr>
+             </table>
+        </section>
+        <section id="blog">
+            <h2>Latest Posts</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil explicabo architecto maxime obcaecati quidem, officia recusandae eveniet molestias eligendi dolorem consectetur dolor commodi mollitia nesciunt nisi reprehenderit cupiditate debitis unde?
+            </p>
+        </section>
+    </main>
+     <footer>
+        <h1>LOGO</h1>
+        <nav>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+
+            <a href="">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </nav>
+        <p>All rights reserved; &copy; George 2024.</p>
+        <a href="#">Scroll to top</a>
+     </footer>
+
+     <!-- HTML Symbols -->
+      <p>Register Symbol &reg;</p>
+      <p>Trademark Symbol &trade;</p>
+      <p>Up Arrow Symbol &uarr;</p>
+      <p>Down Arrow Symbol &darr;</p>
+      <p>Right Arrow Symbol &rarr;</p>
+      <p>Left Arrow Symbol &larr;</p>
+      <p>Euro Symbol &euro;</p>
+
+      <!-- HTML Emoji's -->
+       <p>&#128516;</p>
+       <p>&#128525;</p>
+       <!-- A unicode is a universal character encoding standard, that assigns a unique number to every character, symbol or emoji, in practically every language and writing system used in the world. -->
+</body>
+</html>

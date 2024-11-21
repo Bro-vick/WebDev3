@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 4</title>
+    <style>
+        p {
+            font-size: 20px; 
+            color: darkslategrey;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Text properties</h2>
+    <h3 style="text-align: center;">Instructions</h3>
+    <p style="color: brown; text-align: justify;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium cum nesciunt labore.  Et praesentium suscipit porro tempora voluptatum dolorem rerum numquam quae magnam repellendus? Minus qui natus nulla aliquid voluptates.
+    </p>
+    <p style="text-align: right; ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero impedit suscipit vero, corrupti quod veritatis neque rem doloremque expedita velit adipisci facere ut ullam magni ab praesentium nulla odit.
+    </p>
+    <p style="direction: rtl;">
+        This text has a direction of right to left. 
+    </p>
+    <p style="text-align-last: right;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis facilis dolore nemo culpa nulla esse explicabo odit amet adipisci, autem, nostrum, omnis magnam accusantium sequi quisquam sapiente ad aspernatur odio!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt libero, aut voluptatum iusto magni porro officiis, inventore quos illo ab odio saepe obcaecati. At, aliquam hic quo odit explicabo aperiam.
+    </p>
+    <button style="text-align: right;">Learn More</button>
+
+    <h2>Vertical Align Property</h2>
+    <p style="text-align: center;">
+        I have a good shop <img src="../images/shop.jpeg" alt="" width="14" height="14" style="vertical-align: super; border: 2px solid brown;"> for buisness.
+    </p>
+    <p style="text-align: center;">
+        I have a good shop <img src="../images/shop.jpeg" alt="Shop Image" width="14" height="14" style="vertical-align: sub; border: 2px solid brown;"> for buisness.
+    </p>
+
+    <h2>Text Decoration Property</h2>
+    
+    <p style="text-align: center; text-decoration-line: overline; text-decoration-color: green; text-decoration-style: double; text-decoration-thickness: 5px;">
+        Hi there, Welcome to class today!
+    </p>
+    <p style="text-decoration-line: line-through; text-decoration-color: red; ">
+        All is forgiven.
+    </p>
+    <!--
+        Text decoration can be used as a shorthand property:
+        Syntax: <'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'> || <'text-decoration-thickness'> 
+    -->
+    <p style="text-decoration: underline purple dashed 5px;">
+        Follow these instructions
+    </p>
+    <!--    
+        Text decoration none; is used to remove default text decoration, like the underline in hyperlinks.   
+    -->
+    <a href="./class2.html" >Click here to go to next class 2</a>
+
+    <h2>Text Transform: This is used to specify letter cases. (uppercase, lowercase, titlecase)</h2>
+    <p style="text-transform: uppercase;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis eius adipisci illum dolorum. Quo voluptates itaque provident unde nisi consequuntur ipsa. Vel aliquid pariatur ut assumenda aperiam, voluptates odio?
+    </p>
+    <p style="text-transform: lowercase;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis eius adipisci illum dolorum. Quo voluptates itaque provident unde nisi consequuntur ipsa. Vel aliquid pariatur ut assumenda aperiam, voluptates odio?
+    </p>
+    <p style="text-transform: capitalize;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis eius adipisci illum dolorum. Quo voluptates itaque provident unde nisi consequuntur ipsa. Vel aliquid pariatur ut assumenda aperiam, voluptates odio?
+    </p>
+
+    <h2>Text Spacing Properties (letter-spacing, line-height, word-spacing, text-indent, white-space)</h2>
+    <h1 style="text-transform: uppercase; letter-spacing: 4px;">perfume</h1>
+    <p style="line-height: 60px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Qui obcaecati facilis eos quam dignissimos officia aspernatur doloribus ut, eum assumenda, dicta maxime beatae aperiam dolorem iure ab dolorum repellendus molestias.
+    </p>
+    <p style="word-spacing: 10px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus placeat aliquam consequuntur hic, eveniet harum labore ex expedita ab debitis saepe nam quasi iste dignissimos voluptatem enim tempore aut.
+    </p>
+    <p style="text-indent: 70px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus placeat aliquam consequuntur hic, eveniet harum labore ex expedita ab debitis saepe nam quasi iste dignissimos voluptatem enim tempore aut.
+    </p>
+    <!-- The white-spacing property is used to specify the space between the words in a text -->
+     <p style="white-space: wrap;">
+        Did you know? That it takes Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, iste. 
+        Did you know? That it takes Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, iste. 
+        Did you know? That it takes Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, iste. 
+        Did you know? That it takes Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, iste. 
+     </p>
+
+     <h1 style="text-shadow: 2px 2px rgba(0, 0, 255, 0.581); text-align: center; font-size: 60px; ">Text Shadows</h1>
+     <p style="font-weight: 800; font-style: italic; font-size: 45px; font-family: cursive;">
+        I Love Jesus
+     </p>
+     <!-- 
+        In CSS there are five generic font families
+        1) Serif fonts: They have a small stroke at the edge of each letter. They create a sense of formality and elegance.
+        2) Sans-serif fonts: They have clean lines (no small strokes attached). They create a modern and minimalistic look.
+        3) Monospace fonts:  These have letters with the same fixed width. They create a mechanical look.
+        4) Cursive fonts: they imitate human handwriting.
+        5) Fantasy fonts: they are decorative/playful fonts.
+     -->
+</body>
+</html>

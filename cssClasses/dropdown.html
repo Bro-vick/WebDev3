@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <style>
+          *{
+            margin: 0;
+        }
+        :root{
+            --mainBlue: rgb(35, 55, 152, 0.6);
+            --primaryTextColor: rgba(38, 38, 38, 0.886);
+            --secondaryTextColor: rgba(114, 105, 105, 0.886);
+            --mainFont: "Epilogue", serif;
+            --brandYellow: rgb(191, 179, 5);
+            --brandGreen: rgb(36, 103, 0);
+            --brandRed: rgb(159, 29, 0);
+
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            background-color: var(--mainBlue);
+        }
+        nav a{
+            text-decoration: none;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 800;
+            color: var(--primaryTextColor);
+            margin: 5px;
+        }
+       
+        nav a:nth-child(3){
+            background-color: brown;
+        }
+        nav a:hover{
+            border-bottom: 2px solid var(--brandYellow);
+        }
+        .auth button{
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            background-color: var(--mainBlue);
+            color: var(--brandRed);
+            font-weight: 700;
+        }
+        header h1{
+            color: var(--brandGreen);
+            font-size: 40px;
+        }
+        header h1 span{
+            color: var(--brandRed);
+        }
+        .dropDown{
+            position: relative;    
+        }
+        .dropBtn{
+            display: inline-block;
+            padding: 10px;
+            color: var(--primaryTextColor);
+            text-decoration: none;
+            font-weight: 700;
+            background-color: lavender;
+        }
+        .dropContent{
+            display: none;
+            position: absolute;
+            background-color: var(--mainBlue);
+        }
+        .dropContent a{
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+            margin: 5px;
+            color: aliceblue;
+        }
+        .dropContent a:hover{
+            background-color: darkgrey;
+            color: var(--secondaryTextColor);
+        }
+        .dropDown:hover .dropContent{
+            display: block;
+        }
+        .hero{
+            height: 300px;
+            background-color: cadetblue;
+            /* The auto value in CSS is used with various properties to let the browser automatically calculate or set a value, based on specific layout rules. */
+            margin: auto;
+            max-width: 300px;
+            /* 
+                max-width -- sets the maximum allowable width of an element. i.e This element won't exceed 300px, but can be smaller.
+                It is very useful for responsive design, because it allow an element resize based on available space while capping its maximum width.
+            */
+        }
+        .hero2{
+            height: 300px;
+            min-width: 300px;
+            background-color: navy;
+            margin-top: 20px;
+        }
+        .heroMain{
+            width: 30%;
+            height: 80%;
+            max-width: 300px;
+            min-width: 150px;
+            background-color: brown;
+        }
+        @media(max-width:630px){
+            nav{
+                display: none;
+            }
+        }
+        /* 
+            Common breakpoints according to widths of devices
+            320px — 480px: Mobile devices
+            481px — 768px: iPads, Tablets
+            769px — 1024px: Small screens, laptops
+            1025px — 1200px: Desktops, large screens
+            1201px and more —  Extra large screens, TV
+        */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mr <span>Soft</span></h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </nav>
+        <div class="dropDown">
+            <a href="" class="dropBtn">Services We Provide</a>
+            <div class="dropContent">
+                <a href="#">Data Analytics</a>
+                <a href="#">Web Solutions</a>
+                <a href="#">Project Management</a>
+                <a href="#">A.I Models</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="hero">
+        </div>
+        <div class="hero2">
+            <div class="heroMain"></div>
+        </div>
+    </main>
+</body>
+</html>
