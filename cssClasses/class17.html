@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 17</title>
+    <style>
+        .btn{
+            padding: 10px;
+            background-color: darkslategray;
+            font-size: 20px;
+            color: aliceblue;
+            cursor: pointer;
+            transition: all 1s ease;
+            margin-left: 50%;
+        }
+        .btn:hover{
+            background-color: brown;
+            transform: scale(1.5);
+        }
+        .box{
+            height: 250px;
+            width: 250px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 800;
+            color: blue;
+            background-color: rgb(24, 65, 101);
+            border: 2px dashed blue;
+            animation: spiderman 4.5s ease 2s 3;
+        }
+        @keyframes spiderman {
+            0%, 100%{
+                transform: translate(100px);
+                opacity: .2;
+            }
+            50%{
+                transform: translate(400px, 400px);
+                opacity: .6;
+            }
+            /* 100%{
+                transform: translate(0);
+                opacity: 1;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+            CSS Transitions: The transition property allows us to smoothly change CSS properties over time.
+            It's ideal for hover effects and small state dependent changes.
+            Syntax:
+            transition: property duration timing-function delay; 
+            property -- is the css property you want to animate e.g background-color, transform, color, all.
+            duration -- How long the transition should last e.g 1s, 700ms etc
+            timing-function -- The speed curve of the transition e.g ease, linear, ease-in, etc
+            delay: The is the time before the transition starts.
+
+            Common Timing Function:
+            linear - Constant speed from start to finish.
+            ease - starts slow then normal, then ends slow.
+            ease-in - starts slowly, then speeds up
+            ease-out - starts fast, then slows down
+            ease-in-out - Combines ease-in and ease-out
+            cubic-bezier - Here we control the curve with four points . e.g cubic-bezier(0.4, 0, 0.5, 1)
+    -->
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odio repellendus quam, ipsam ipsum minima voluptas dolorem alias nam officiis dolore natus nostrum ut illo quos necessitatibus reprehenderit modi error.
+    </p>
+    <button class="btn">Get Started</button>
+    <!-- 
+        Animations allow more complex sequences of changes over time, compared to transitions, with @keyframes, we define how the element's style will change at specific points in time.
+        syntax"
+        @keyframes animation-name {
+            0% {
+                Starting styles
+            }
+            50% {
+                Intermediate styles
+            }
+            100% {
+                Ending styles
+            }
+        }
+        
+        selector {
+            animation: animation-name duration timing-function delay iteration-count direction fill-mode;
+        }
+    -->
+        <div class="box">
+
+        </div>
+</body>
+</html>
