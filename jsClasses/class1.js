@@ -60,5 +60,45 @@ let firstName = "Victor";
 let greet = "Hi " + lastName + " How are you today?";
 let bye = "Alright goodbye " + firstName;
 
+// String Interpolation || Template literal
+let sayHello = `Hello ${firstName}, How are you doing?`;
+
 console.log(greet);
 console.log(bye);
+console.log(sayHello);
+
+console.log("The type of the sayHello variable is a ", typeof(sayHello))
+
+// We use the typeof() function to check the data type of a variable.
+// 2) Number: It's used to represent numeric values, whether integers or decimals(floats). 
+let user_age = 25;
+const pi = 3.142;
+console.log(age);
+console.log(typeof(pi));
+console.log(user_age + pi);
+
+// 3) Boolean: They are used to represent logical values indicating true or false.
+const isClosed = true;
+const isOpen = false;
+
+console.log(isClosed);
+console.log(typeof(isOpen));
+
+// 4) Null: This represents the intentional omission/absence of a value
+let course = null;
+let user = null;
+console.log(typeof(user));
+
+// 5) Undefined: This represents a variable that has been declared but not assigned a value.
+let a, b, c;
+console.log(typeof(a));
+
+// 6) Bigint: Bigint is a numeric data type that can represent integers with arbitrary precision. It is denoted by appending 'n' to the end of an integer.
+let bigNumber = 123456789012345678901234567890n;
+
+// 7) Object: They are a collection of key-value pairs, where values can be of any data type. Including other objects, arrays, or functions.
+const person = {
+    name: 'John',
+    age: 30,
+    isAdmin: false
+};
