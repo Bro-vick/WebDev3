@@ -8,7 +8,7 @@ alert(`Hi ${username} Welcome To Class!!!`);
 let test = confirm("Do you want to proceed?");
 console.log(test);
 
-let color = prompt("Enter your desired color:")~
+let color = prompt("Enter your desired color:")
 
 document.body.style.backgroundColor = color;
 
