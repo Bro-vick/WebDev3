@@ -23,3 +23,10 @@ let newNum1 = Number(num1)
 let newNum2 = Number(num2)
 console.log(typeof(newNum1));
 console.log(newNum1 + newNum2);
+
+let num3 = '30.4567';
+let num3Int = parseInt(num3)
+let num3Float = parseFloat(num3)
+
+console.log(num3Int)
+console.log(num3Float)
