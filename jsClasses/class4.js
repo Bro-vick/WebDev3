@@ -21,6 +21,7 @@
     Write a program that prompts the user for their name and age and then console.log "Hi username you are eligible to vote!" if the user age is greater than or equal 18, and vice versa.
 */
 
+const prompt = require('prompt-sync')();
 let username = prompt("Please Enter your name: ");
 let age = prompt("Please Enter your age: ");
 if(age >= 18){
@@ -61,4 +62,14 @@ if(time <= 12 && day.toLowerCase() == 'sunday' && weather == 'sunny'){
 
 // Ternary operators
 // Using Ternary Operaators: Syntax: (Condition) ? code execution : code execution;
-(age >= 18) ? document.write(`Hi ${username} you are eligible to vote.`) : document.write(`Sorry ${username} you are eligible to vote.`);
+// (age >= 18) ? document.write(`Hi ${username} you are eligible to vote.`) : document.write(`Sorry ${username} you are eligible to vote.`);
+
+// Nullish Coalescing Operator (??) -- This provides a convenient way to handle default values. Default/fallback values can be used when a value is null or undefined, but not for other values like 0, false, "".
+
+// const prompt = require('prompt-sync')(); For using prompt on the terminal
+// This is used to make use of propmts on the terminal.
+const defaultValue = "Sorry Unkown Input";
+let userage = 30;
+const userInput = null ?? defaultValue;
+const userAge = userage ?? "Sorry you have to enter your Age"; 
+console.log("This is your input", userInput, "and", userAge);
