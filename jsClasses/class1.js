@@ -1,4 +1,5 @@
 /*
+    5/12/2024
     What is Javascript?
 
     Javascript is a programming language initially designed to interact with elements of web pages. 
