@@ -35,4 +35,25 @@ console.log(str.replace(/to/g, "#"))
 console.log(str.includes("too"))
 
 
+//slice(start, end) method
+console.log(str.slice(0, 7).toUpperCase());
+
+//substring: is similar to the slice method but doesn't allow negative indices
+console.log(str.substring(7));
+
+// charAt(index): Returns the character at a specified index
+console.log(str.charAt(11));
+
+// charCodeAt(index): Returns the unicode of the character at the specified index
+console.log(str.charCodeAt(12));
+
+// concat: 
+let str1 = "Hi there";
+let str2 = str1.concat(" ", str);
+console.log(str2);
+
+
+let str3 = str1.split("").reverse();
+console.log(str3)
+
 
