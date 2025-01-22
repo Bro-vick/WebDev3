@@ -22,7 +22,7 @@ const anagramChecker = (s, t) => {
       return false;
   };
   let sArray = s.split(""); // ["j", "a", "r"]
-  let tArray = t.split(""); // ["j", "a", "r"]
+  let tArray = t.split(""); // ["j", "a", "m"]
   
   let sSort = sArray.sort(); // ["a", "j", "r"]
   let tSort = tArray.sort(); // ["a", "j", "m"]
@@ -30,13 +30,11 @@ const anagramChecker = (s, t) => {
   let sJoin = sSort.join(""); // "ajr"
   let tJoin = tSort.join(""); // "ajm"
 
+  return sJoin === tJoin // "ajr" === "ajm"
   // The code can be shortened into:
   // let newS = s.split("").sort().join("");
   // let newT = t.split("").sort().join("");
-
-  if (sJoin === tJoin) { // "ajr" === "ajm"
-      return true;
-  };
+  // return newS === newT // "ajr" === "ajm"
 }
 
 console.log(anagramChecker("racecar", "carrace"));
