@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Generator</title>
+    <style>
+         body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+        }
+        img {
+            width: 100%;
+            height: 50%;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: chocolate;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="randImg" src="" alt="Random Image">
+        <button onclick="fetchImage()">Get Random Image</button>
+    </div>
+    <script>
+        async function fetchImage(){
+        try {
+            const response = await fetch('https://picsum.photos/200/300');
+            const imageUrl = response.url;
+            document.getElementById('randImg').src = imageUrl;
+        } catch(err){
+            console.log(err)
+            throw new Error("The thing no do");
+        }
+    };
+    </script>
+</body>
+</html>
