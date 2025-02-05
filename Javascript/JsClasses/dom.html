@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DOM</title>
+</head>
+<body>
+    <h1 id="dom">Understanding The DOM</h1>
+    <nav id="navbar">
+        <a href="">Home</a>
+        <a href="">About US</a>
+        <a href="">Contact</a>
+        <a href="">Gallery</a>
+    </nav>
+    <h2>Our Services</h2>
+    <ul id="services">
+        <li class="service">Data Analysis</li>
+        <li class="service">Project Management</li>
+        <li class="service">Graphics Design</li>
+        <li class="service">Virtual Assistant</li>
+    </ul>
+    <button>Ger Started</button>
+    <button>Register</button>
+    <script>
+           /* DOM (Document Object Model): Represents all page contents as objects that can be modified.
+            The document object is the main "entry point to the page. We can change anything on the page using it.      
+        */
+       document.body.style.backgroundColor = "lightgreen";
+
+        // Prompt the user to enter a desired color then, make that the background color.
+        // Create an array of 7 - 10 colors and after every 3 seconds the background should change.
+        
+        function changeColor(){
+            const colors = ["red", "green", "blue", "yellow", "purple", "grey", "lavender", "pink", "black", "orange"];
+            
+            let i = 0;
+            setInterval(() => {
+                document.body.style.backgroundColor = colors[i];
+                i === colors.length ? i = 0 : i++;
+            }, 3000)
+        }
+        changeColor()
+
+        // Selecting Elements
+        // Using ID names
+        let header = document.getElementById("dom");
+        header.style.color = "blue";
+
+        // Using Query Selector
+        const navbar = document.querySelector("#navbar");
+        const navbarA = document.querySelector("#navbar a");
+        const navbarA2 = document.querySelectorAll("#navbar a");
+
+        navbarA.style.backgroundColor = "grey"
+        navbarA.style.padding = "25px"
+        console.log(navbarA)
+        console.log(navbarA2)
+        for(let i = 0; i < navbarA2.length; i++){
+            navbarA2[i].style.backgroundColor = "grey";
+            navbarA2[i].style.padding = "25px";
+        };
+        
+        // Using Class Names
+        const services = document.getElementsByClassName('service');
+        console.log(services); // Style the 3rd service bg. font
+        setTimeout(() => {
+            services[3].textContent = "Cyber Security"
+            services[3].style.fontSize = "27px"
+        }, 5000);
+
+        // Using Tag Names
+        const btns = document.getElementsByTagName("button");
+        console.log(btns);
+
+        // Javascript Project Ideas 
+        /*
+        navbar
+        sidebar
+        slider carousel
+        Calculator
+        Implement Countdown
+        Implement - An acordion functionality
+
+        */
+    </script>
+</body>
+</html>

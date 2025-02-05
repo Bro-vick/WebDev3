@@ -35,4 +35,32 @@ const cannotDrink = ages.filter(function(age){
         return true;
     };
 });
-console.table(cannotDrink)
+console.table(cannotDrink);
+
+
+// filter the companies array and give me a new aray of companies (retailCompanies) in the retail category.
+const retailCompanies = companies.filter(company => company.category === "Retail");
+console.log(retailCompanies)
+
+// filter companies that have lasted for at least ten years
+const lastedTenYears = companies.filter(company => company.end - company.start >= 10);
+console.log(lastedTenYears)
+
+// map
+const companyRating = companies.map(company => `${company.name} Is a wonderful company.`);
+console.log(companyRating);
+
+// Using a for loop recreate companyRating
+const companyRating2 =  [];
+for(let i = 0; i <= companies.length; i++){
+    companyRating2.push(companies[i].category); 
+};
+console.log(companyRating2)
+
+// sort
+// Ascending order
+const sortedAges = ages.sort((a, b) => a - b);
+console.log(sortedAges);
+// Descendng Order
+const descendSortedAges = ages.sort((a, b) => b - a);
+console.log(descendSortedAges);
