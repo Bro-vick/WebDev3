@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(241, 70, 13);
+        }
+
+        .fill {
+            background-image: url(../../images/house.png);
+            background-size: contain;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            top: 5px;
+            left: 5px;
+            cursor: pointer;
+        }
+
+        .hold {
+            border: solid 5px #ccc;
+        }
+
+        .empty {
+        display: inline-block;
+        height: 160px;
+        width: 160px;
+        margin: 10px;
+        border: solid 3px salmon;
+        background: white;
+        }
+
+        .hovered {
+            background: #f4f4f4;
+            border-style: dashed;
+        }
+
+        #dropArea {
+            width: 900px;
+            height: 400px;
+            border: 2px dashed #ccc;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            color: #999;
+            margin: 50px auto;
+        }
+        #dropArea.dragover {
+            border-color: #000;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="empty">
+        <div class="fill" draggable="true"> </div>
+    </div>
+    
+      <div class="empty">
+      </div>
+    
+      <div class="empty">
+      </div>
+    
+      <div class="empty">
+      </div>
+    
+      <div class="empty">
+      </div>
+
+      <!-- // Drop Files in an Area -->
+
+      <div id="dropArea">Drop files here</div>
+      <input type="file" id="fileInput" multiple style="display: none;">
+      <input type="file">
+      <p id="fileList"></p>
+
+      <script>
+            const fill = document.querySelector('.fill');
+            const empties = document.querySelectorAll('.empty');
+
+            // Add Event listeners
+            fill.addEventListener('dragstart', dragStart);
+            fill.addEventListener('dragend', dragEnd);
+
+            for (const empty of empties){
+                empty.addEventListener('dragover', dragOver);
+                empty.addEventListener('dragenter', dragEnter);
+                empty.addEventListener('dragleave', dragLeave);
+                empty.addEventListener('drop', dragDrop);
+            }
+
+            function dragStart(){
+                this.className += ' hold';
+                setTimeout(() => (this.className = 'invisible'), 0);
+            };
+
+            function dragEnd(){
+                this.className = 'fill';
+            };
+
+            function dragOver(event){
+                event.preventDefault()
+            }
+
+            function dragEnter(event){
+                event.preventDefault();
+                this.className += ' hovered';
+            }
+
+            function dragLeave(){
+                this.className = 'empty';
+            }
+
+            function dragDrop(){
+                this.className = 'empty';
+                this.append(fill);
+            }
+           
+            // Drag and drop files input
+            document.addEventListener("DOMContentLoaded", function() {
+                const dropArea = document.getElementById("dropArea");
+                const fileInput = document.getElementById("fileInput");
+                const fileList = document.getElementById("fileList");
+
+                dropArea.addEventListener("dragover", (event) => {
+                    event.preventDefault();
+                    dropArea.classList.add("dragover");
+                });
+
+                dropArea.addEventListener("dragleave", () => {
+                    dropArea.classList.remove("dragover");
+                });
+
+                dropArea.addEventListener("drop", (event) => {
+                    event.preventDefault();
+                    dropArea.classList.remove("dragover");
+                    handleFiles(event.dataTransfer.files);
+                });
+
+                dropArea.addEventListener("click", () => {
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener("change", (e) => {
+                console.log(e)
+                handleFiles(fileInput.files);
+
+                });
+
+                function handleFiles(files) {
+                    fileList.innerHTML = ""; // Clear the current file list
+                    for (let i = 0; i < files.length; i++) {
+                        const file = files[i];
+                        const listItem = document.createElement("p");
+                        listItem.textContent = `File: ${file.name}, Size: ${file.size} bytes`;
+                        fileList.appendChild(listItem);
+                    }
+                }
+            });
+
+
+      </script>
+</body>
+</html>

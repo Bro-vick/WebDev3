@@ -1,7 +1,7 @@
 /*
   -- VALID ANAGRAM TASK:
   Problem: Given two strings s and t, create a function that returns true,
-   if the two strings are anagrams of each other, otherwise return false.
+  if the two strings are anagrams of each other, otherwise return false.
 
   An anagram is a string that contains the exact same characters as another string, also the same number of characters but the order of the characters can be different.
 

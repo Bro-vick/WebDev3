@@ -14,7 +14,6 @@ const days = ["Sunday", "Monday", "Tuesday", "Wed", "Thursday", "Fri", "Sat"];
 console.log(`Today is ${days[today.getDay()]}`);
 
 console.log(today.getMonth())
-// Create an array of months use the get month method, to output the current monthh i.e "We are in the month of November". 
 console.log(today.getHours())
 console.log(today.getFullYear())
 console.log(today.toDateString())
